@@ -10,14 +10,103 @@
     --White: hsl(0, 0%, 100%);
     --Dark-desaturated-blue: hsl(236, 21%, 26%);
     --Very-dark-blue: hsl(235, 16%, 14%);
-    --Very-dark-blue: hsl(234, 17%, 12%)
+    --Very-dark: hsl(234, 17%, 12%)
+}
+
+ul li {
+    list-style: none;
 }
 
 html, body {
+    position: relative;
     font-size: 14px;
     font-family: 'Red Hat Text', sans-serif;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url(/images/bg-stars.svg), url(/images/pattern-hills.svg) bottom no-repeat, var(--Very-dark-blue);
+}
+
+
+h1 {
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+
+.timer li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--Dark-desaturated-blue);
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.timer li div p {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--soft-red);
+}
+
+.timer li p {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+/** Footer */
+
+footer {
+   position: absolute;
+   bottom: 50px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.facebook, .pinterest, .instagram {
+    height: 30px;
+    width: 30px;
+}
+
+
+.facebook {
+    background: url(/images/icon-facebook.svg) center/cover no-repeat;
+}
+
+.pinterest {
+    background: url(/images/icon-pinterest.svg) center/cover no-repeat;
+}
+
+.instagram {
+  height: 30px;  
+  width: 30px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
