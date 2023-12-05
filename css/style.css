@@ -26,7 +26,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(/images/bg-stars.svg), url(/images/pattern-hills.svg) bottom no-repeat, var(--Very-dark-blue);
+    background: url(../images/bg-stars.svg), url(../images/pattern-hills.svg) bottom no-repeat, var(--Very-dark-blue);
 }
 
 
