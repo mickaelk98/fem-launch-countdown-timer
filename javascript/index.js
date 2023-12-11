@@ -1,26 +1,36 @@
 const displayDaysArea = document.querySelector(".days")
 const displayHourssArea = document.querySelector(".hours")
 const displayMinutesArea = document.querySelector(".minutes")
-const displaySecondesArea = document.querySelector(".secondes")
+const displaySecondsArea = document.querySelector(".secondes")
+const timer = document.querySelector(".timer")
 
-function getTime() {
-    const toDay = new Date()
+const endDate = new Date(2024, 0, 1, 0, 0, 0);
 
-    let days = toDay.getDate()
-    let hours = toDay.getHours()
-    let minutes = toDay.getMinutes()
-    let secondes = toDay.getSeconds()
+function updateCountdown() {
+    const now = new Date();
+    const timeDifference = endDate - now;
 
-    days = days < 10 ? '0' + days : days
-    hours = hours < 10 ? '0' + hours : hours
-    minutes = minutes < 10 ? '0' + minutes : minutes
-    secondes = secondes < 10 ? '0' + secondes : secondes
+    if (timeDifference > 0) {
+        let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    displayDaysArea.innerHTML = `<p>${days}</p>`
-    displayHourssArea.innerHTML = `<p>${hours}</p>`
-    displayMinutesArea.innerHTML = `<p>${minutes}</p>`
-    displaySecondesArea.innerHTML = `<p>${secondes}</p>`
+        days = days < 10 ? '0' + days : days
+        hours = hours < 10 ? '0' + hours : hours
+        minutes = minutes < 10 ? '0' + minutes : minutes
+        seconds = seconds < 10 ? '0' + seconds : seconds
 
+
+        displayDaysArea.innerHTML = `<p>${days}</p>`
+        displayHourssArea.innerHTML = `<p>${hours}</p>`
+        displayMinutesArea.innerHTML = `<p>${minutes}</p>`
+        displaySecondsArea.innerHTML = `<p>${seconds}</p>`
+
+    } else {
+        timer.innerHTML = "<p>The countdown is over!</p>"
+    }
 }
 
-setInterval(getTime, 1000)
+
+setInterval(updateCountdown, 1000);
