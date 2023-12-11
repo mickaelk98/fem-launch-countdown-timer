@@ -42,7 +42,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 .timer {
@@ -83,7 +83,7 @@ h1 {
 
 footer {
    position: absolute;
-   bottom: 50px;
+   bottom: 70px;
    left: 50%;
    transform: translateX(-50%);
 }
@@ -92,7 +92,7 @@ footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
 }
 
 .facebook svg path, 
@@ -118,8 +118,8 @@ footer ul {
 
 @media screen and (min-width: 768px) {
     .timer li div {
-        width: 100px;
-        height: 100px;
+        width: 900px;
+        height: 900px;
     }
 
     .timer li div p {
@@ -134,12 +134,11 @@ footer ul {
     }
 
     .timer li div {
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
     }
 
     .timer li div p {
-        font-size: 90px;
-    }
-    
+        font-size: 70px;
+    }    
 }
